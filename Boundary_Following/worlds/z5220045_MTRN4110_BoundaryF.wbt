@@ -1,0 +1,413 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.9999754906566284 0.00490090755222306 0.0049999191193453325 4.692364475648731
+  position 0.0005181195850100386 2.6227956741735543 -0.13431023142446596
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2.1445 1.4855
+  floorTileSize 0.33 0.33
+}
+DEF MAZE Group {
+  children [
+    DEF cornerStone Solid {
+      translation -0.7425 0.0325 -0.4125
+      children [
+        DEF cornerStone Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 1
+            roughness 0.5
+          }
+          geometry Box {
+            size 0.015 0.065 0.015
+          }
+        }
+      ]
+      name "solid(4)"
+      boundingObject USE cornerStone
+      physics Physics {
+        density 100
+      }
+    }
+    DEF cornerStone Solid {
+      translation 0.7425 0.0325 -0.4125
+      children [
+        DEF cornerStone Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 1
+            roughness 0.5
+          }
+          geometry Box {
+            size 0.015 0.065 0.015
+          }
+        }
+      ]
+      name "solid(5)"
+      boundingObject USE cornerStone
+      physics Physics {
+        density 100
+      }
+    }
+    DEF cornerStone Solid {
+      translation 0.7425 0.0325 0.4125
+      children [
+        DEF cornerStone Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 1
+            roughness 0.5
+          }
+          geometry Box {
+            size 0.015 0.065 0.015
+          }
+        }
+      ]
+      name "solid(6)"
+      boundingObject USE cornerStone
+      physics Physics {
+        density 100
+      }
+    }
+    DEF cornerStone Solid {
+      translation -0.7425 0.0325 0.4125
+      children [
+        DEF cornerStone Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 1
+            roughness 0.5
+          }
+          geometry Box {
+            size 0.015 0.065 0.015
+          }
+        }
+      ]
+      name "solid(7)"
+      boundingObject USE cornerStone
+      physics Physics {
+        density 100
+      }
+    }
+    DEF hWall Solid {
+      translation 0 0.0325 -0.4125
+      children [
+        DEF hWall Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 0
+            roughness 0.3
+          }
+          geometry Box {
+            size 1.46 0.065 0.015
+          }
+        }
+      ]
+      name "solid(1)"
+      boundingObject USE hWall
+      physics Physics {
+        density 100
+      }
+    }
+    DEF hWall Solid {
+      translation 0 0.0325 0.4125
+      children [
+        DEF hWall Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 0
+            roughness 0.3
+          }
+          geometry Box {
+            size 1.46 0.065 0.015
+          }
+        }
+      ]
+      boundingObject USE hWall
+      physics Physics {
+        density 100
+      }
+    }
+    DEF vWall Solid {
+      translation -0.7425 0.0325 0
+      children [
+        DEF vWall Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 1
+            roughness 0.3
+          }
+          geometry Box {
+            size 0.015 0.065 0.8
+          }
+        }
+      ]
+      name "solid(2)"
+      boundingObject USE vWall
+      physics Physics {
+        density 100
+      }
+    }
+    DEF vWall Solid {
+      translation 0.7425 0.0325 0
+      children [
+        DEF vWall Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 1
+            roughness 0.3
+          }
+          geometry Box {
+            size 0.015 0.065 0.8
+          }
+        }
+      ]
+      name "solid(3)"
+      boundingObject USE vWall
+      physics Physics {
+        density 100
+      }
+    }
+    DEF Pole MazeBlock {
+      translation -0.905 0 -0.5775
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation -0.5775 0 -0.2475
+      name "maze block(20)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation -0.4125 0 -0.2475
+      name "maze block(21)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation -0.2475 0 -0.2475
+      name "maze block(22)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation -0.0825 0 -0.2475
+      name "maze block(23)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation 0.2475 0 -0.2475
+      name "maze block(25)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation 0.4125 0 -0.2475
+      name "maze block(26)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation -0.2475 0 -0.0825
+      name "maze block(32)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation -0.0825 0 -0.0825
+      name "maze block(33)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation 0.0825 0 -0.0825
+      name "maze block(34)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation 0.2475 0 -0.0825
+      name "maze block(35)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation 0.4125 0 -0.0825
+      name "maze block(36)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation 0.5775 0 -0.0825
+      name "maze block(37)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation -0.2475 0 0.0825
+      name "maze block(42)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation 0.2475 0 0.0825
+      name "maze block(45)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation -0.2475 0 0.2475
+      name "maze block(52)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation 0.0825 0 0.2475
+      name "maze block(54)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation 0.2475 0 0.2475
+      name "maze block(55)"
+      length 0.015
+    }
+    DEF Pole MazeBlock {
+      translation 0.4125 0 0.2475
+      name "maze block(56)"
+      length 0.015
+    }
+    DEF hBlock MazeBlock {
+      translation -0.66 0 -0.5775
+      name "maze block(10)"
+      length 0.14
+    }
+    DEF hBlock MazeBlock {
+      translation 0.165 0 -0.0825
+      name "maze block(61)"
+      length 0.14
+    }
+    DEF hBlock MazeBlock {
+      translation 0.33 0 -0.2475
+      name "maze block(16)"
+      length 0.14
+    }
+    DEF hBlock MazeBlock {
+      translation 0.495 0 -0.0825
+      name "maze block(3)"
+      length 0.14
+    }
+    DEF hBlock MazeBlock {
+      translation 0.165 0 0.2475
+      name "maze block(29)"
+      length 0.14
+    }
+    DEF hBlock MazeBlock {
+      translation -0.165 0 0.2475
+      name "maze block(7)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation -0.905 0 -0.33
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(78)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation 0.2475 0 0.165
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(9)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation 0.2475 0 0
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(63)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation -0.2475 0 0
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(12)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation 0.2475 0 -0.165
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(49)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation 0.4125 0 -0.165
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(11)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation 0.4125 0 0.33
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(48)"
+      length 0.14
+    }
+    DEF hBlock MazeBlock {
+      translation -0.495 0 -0.2475
+      name "maze block(4)"
+      length 0.14
+    }
+    DEF hBlock MazeBlock {
+      translation 0 0 -0.0825
+      name "maze block(8)"
+      length 0.14
+    }
+    DEF hBlock MazeBlock {
+      translation 0 0 0.2475
+      name "maze block(13)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation -0.0825 0 -0.33
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(2)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation -0.0825 0 -0.165
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(15)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation -0.2475 0 -0.165
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(14)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation -0.2475 0 0.33
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(5)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation -0.2475 0 0.165
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(6)"
+      length 0.14
+    }
+    DEF vBlock MazeBlock {
+      translation 0.2475 0 0.33
+      rotation 0 1 0 1.5707996938995747
+      name "maze block(1)"
+      length 0.14
+    }
+  ]
+}
+DEF z1234567 E-puck {
+  translation -0.66 0 -0.33
+  rotation 0 1 0 3.141592653589793
+  controller "BoundaryFollowing"
+  camera_width 320
+  camera_height 240
+  turretSlot [
+    E-puckDistanceSensor {
+      translation 0 0 -0.072
+      rotation 0 1 0 1.5708
+      name "ds_front"
+      numberOfRays 2
+    }
+    E-puckDistanceSensor {
+      translation -0.066 0 0
+      rotation 0 1 0 3.1416
+      name "ds_left"
+      numberOfRays 2
+    }
+    E-puckDistanceSensor {
+      translation 0.065 0 0
+      name "ds_right"
+      numberOfRays 2
+    }
+  ]
+}
